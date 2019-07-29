@@ -2,7 +2,7 @@
 ### Rutgers Future Scholars
 ### Brief Sample R code
 ### Ryan Womack
-### Summer 2018
+### Summer 2019
 ############################
 
 setwd("/home/ryan/Downloads/")
