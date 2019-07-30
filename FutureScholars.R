@@ -5,78 +5,7 @@
 ### Summer 2019
 ############################
 
-setwd("/home/ryan/Downloads/")
-download.file("https://ed-public-download.app.cloud.gov/downloads/Most-Recent-Cohorts-All-Data-Elements.csv", "mydata.csv")
-mydata<-read.csv("mydata.csv")
-
-# we explore the data
-head(mydata)
-names(mydata)
-attach(mydata)
-plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
-nrows()
-nrow()
-nrow(mydata)
-class(MD_EARN_WNE_P10)
-class(GRAD_DEBT_MDN_SUPP)
-as.numeric(MD_EARN_WNE_P10)
-
-# data is read in in text format, primarily due to presence of the word "NULL" and "PrivacySuppressed"
-# we can find and replace all of the 
-# we can convert variables one at a time using as.numeric
-mydata$MD_EARN_WNE_P10<-as.numeric(mydata$MD_EARN_WNE_P10)
-mydata$GRAD_DEBT_MDN_SUPP<-as.numeric(mydata$GRAD_DEBT_MDN_SUPP)
-attach(mydata)
-
-# ultimately it is easier to reimport the entire data frame using 
-# as.is and na.strings options to et us bring the data in in the correct numeric format
-
-mydata <- read.csv ("Most-Recent-Cohorts-Scorecard-Elements.csv", as.is=TRUE, na.strings = c("PrivacySuppressed","NULL"))
-summary(mydata)
-attach(mydata)
-
-death deht adj earj9jgs
-
-
-# now working better
-plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
-
-# we can start to explore the data with commands like histogram to generate a histogram
-library(lattice)
-
-histogram(MD_EARN_WNE_P10)
-histogram(~MD_EARN_WNE_P10 | STABBR)
-histogram(~MD_EARN_WNE_P10 | CONTROL)
-histogram(~MD_EARN_WNE_P10 | HIGHDEG)
-
-densityplot(~MD_EARN_WNE_P10 | CONTROL)
-densityplot(~MD_EARN_WNE_P10 | CONTROL, layout=c(1,3))
-densityplot(~MD_EARN_WNE_P10 | HIGHDEG, layout=c(1,5))
-
-
-
-# other commands like max and sort can be used to undestand the data
-max(MD_EARN_WNE_P10)
-sort(MD_EARN_WNE_P10)
-
-#### DATA ANALYSIS
-# getting started
-# check and set your working directory
-
-getwd()
-setwd("C:/Users/Staff/Desktop")
-
-summary(mydata)
-
-# the summary command provides a useful overview of the data and
-# its values. We can also browse data in Excel if it is not
-# too large.
-
-# now create a subset of 4 year colleges only
-mydata2<-subset(mydata, HIGHDEG=="3" | HIGHDEG=="4")
-
-# we attach the data so that we can use short variable names
-attach(mydata2)
+## SETUP
 
 # for graphing, we need extra packages
 install.packages("lattice", dependencies=TRUE)
@@ -86,9 +15,72 @@ install.packages("ggplot2", dependencies=TRUE)
 library(lattice)
 library(ggplot2)
 
-# first plots, some barcharts
+
+## DATA WRANGLING - data import and cleaning
+
+# grab your data
+# adjust working directory as necessary
+setwd("/home/ryan/Downloads/")
+
+# can import data directly into R with these steps
+download.file("https://ed-public-download.app.cloud.gov/downloads/Most-Recent-Cohorts-All-Data-Elements.csv", "mydata.csv")
+
+# a couple of options are necessary to get the data to read in smoothly
+mydata <- read.csv("mydata.csv",  as.is=TRUE, na.strings = c("PrivacySuppressed","NULL"))
+
+# we explore the data
+head(mydata)
+names(mydata)
+
+# attaching the data lets us easily use variable names in their short form
+attach(mydata)
+
+# for example
+plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
+
+# understand the data structure
+nrow(mydata)
+
+class(MD_EARN_WNE_P10)
+class(GRAD_DEBT_MDN_SUPP)
+MD_EARN_WNE_P10
+as.numeric(MD_EARN_WNE_P10)
+
+table(CONTROL)
+table(HIGHDEG)
+
+# limit to 4-yr institutions and eliminate for profits
+mydata <- subset(mydata, CONTROL==1 | CONTROL==2)
+mydata <- subset(mydata, HIGHDEG==3 | HIGHDEG==4)
+attach(mydata)
+
+table(CONTROL)
+table(HIGHDEG)
+
+plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
+
+# we can start to explore the data with commands like histogram to generate a histogram
+library(lattice)
+
 # the lattice package uses the | symbol (found above the Return key on the keyboard)
 # to indicate which categorical variable to use to break down the data
+
+histogram(MD_EARN_WNE_P10)
+histogram(~MD_EARN_WNE_P10 | STABBR)
+histogram(~MD_EARN_WNE_P10 | CONTROL, strip=strip.custom(strip.levels=c(TRUE,TRUE)))
+histogram(~MD_EARN_WNE_P10 | HIGHDEG, strip=strip.custom(strip.levels=c(TRUE,TRUE)))
+densityplot(~MD_EARN_WNE_P10 | CONTROL)
+densityplot(~MD_EARN_WNE_P10 | CONTROL, layout=c(1,2), strip=strip.custom(strip.levels=c(TRUE,TRUE)))
+densityplot(~MD_EARN_WNE_P10 | HIGHDEG, layout=c(1,2), strip=strip.custom(strip.levels=c(TRUE,TRUE)))
+
+# other commands like max and sort can be used to undestand the data
+max(MD_EARN_WNE_P10)
+sort(MD_EARN_WNE_P10)
+
+#### DATA ANALYSIS
+
+# first plots, some barcharts
+
 
 barchart(~PCTFLOAN|CONTROL)
 
@@ -96,15 +88,15 @@ barchart(~PCTFLOAN|CONTROL)
 # we probably want to know the average values of the variables
 # so we have to compute that separately
 # we use the aggregate function
-# here PCTFLOAN is broken down by HBCU status (categorical variable comes second)
+# here PCTFLOAN is broken down by public/private status (categorical variable comes second)
 # use FUN=mean to compute the mean of the data, or substitute another function
 # store the result as a new variable, here called res
 
-res <- aggregate(PCTFLOAN ~ HBCU, data = mydata, FUN = mean)
+res <- aggregate(PCTFLOAN ~ CONTROL, data = mydata, FUN = mean)
 
 # res is just text, so we need to plot it as follows
 
-ggplot(res, aes(x = HBCU, y = PCTFLOAN)) + geom_bar(stat = "identity")
+ggplot(res, aes(x = CONTROL, y = PCTFLOAN)) + geom_bar(stat = "identity")
 
 # ggplot2 is a powerful and extensive graphics package with many functions
 # there are always at least two parts to a ggplot command
@@ -115,6 +107,37 @@ ggplot(res, aes(x = HBCU, y = PCTFLOAN)) + geom_bar(stat = "identity")
 # experiment with your own combinations of variables here
 # remember you must run both the aggregate and ggplot commands to generate
 # useful output beyond counts of the data
+
+
+## REGRESSION
+
+# remember this plot?
+plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
+
+cor(MD_EARN_WNE_P10,GRAD_DEBT_MDN_SUPP, use="complete.obs")
+summary(lm(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP))
+
+# ggplot can show us this relationship graphically
+
+ggplot(mydata,aes(y=MD_EARN_WNE_P10,x=GRAD_DEBT_MDN_SUPP))+geom_point()+geom_smooth(method='lm')
+
+
+# EASY ANALYSIS FUNCTION
+
+# let's try to find what affects earnings
+
+myearn<-function(z)
+{
+  densityplot(z)
+  plot(MD_EARN_WNE_P10~z)
+  ggplot(mydata,aes(y=MD_EARN_WNE_P10,x=z))+geom_point()+geom_smooth(method='lm')
+}
+
+myearn(GRAD_DEBT_MDN_SUPP)
+
+plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
+ggplot(mydata,aes(y=MD_EARN_WNE_P10,x=GRAD_DEBT_MDN_SUPP))+geom_point()+geom_smooth(method='lm')
+
 
 
 #### DATA VISUALIZATION AND WEB APPS
