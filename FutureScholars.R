@@ -128,7 +128,7 @@ ggplot(mydata,aes(y=MD_EARN_WNE_P10,x=GRAD_DEBT_MDN_SUPP))+geom_point()+geom_smo
 
 myearn<-function(z)
 {
-  densityplot(z)
+  print(densityplot(z))
   plot(MD_EARN_WNE_P10~z)
   ggplot(mydata,aes(y=MD_EARN_WNE_P10,x=z))+geom_point()+geom_smooth(method='lm')
 }
@@ -138,7 +138,19 @@ myearn(GRAD_DEBT_MDN_SUPP)
 plot(MD_EARN_WNE_P10~GRAD_DEBT_MDN_SUPP)
 ggplot(mydata,aes(y=MD_EARN_WNE_P10,x=GRAD_DEBT_MDN_SUPP))+geom_point()+geom_smooth(method='lm')
 
+# we can sort, filter, and export our data
 
+deadlycolleges <- subset(mydata, DEATH_YR4_RT>0)
+deadlycolleges <- deadlycolleges[order(deadlycolleges$DEATH_YR4_RT),]
+deadlycolleges[,"INSTNM"]
+write.csv(deadlycolleges, file="deadlycolleges.csv")
+
+# something more usual, like SAT
+
+brainycolleges <- subset(mydata, SAT_AVG>1400)
+brainycolleges <- brainycolleges[order(brainycolleges$SAT_AVG),]
+brainycolleges[,"INSTNM"]
+write.csv(brainycolleges, file="brainycolleges.csv")
 
 #### DATA VISUALIZATION AND WEB APPS
 
