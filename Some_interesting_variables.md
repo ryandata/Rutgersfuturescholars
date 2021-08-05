@@ -1,5 +1,6 @@
 # Some interesting variables in the College Scorecard Data
 
+x
 AVGFACSAL	Average Faculty Salary
 
 C150_4 		completion (graduation) rate in 6 years - 150% of standard time
