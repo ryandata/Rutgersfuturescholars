@@ -16,7 +16,7 @@ Rutgers Future Scholars met for one week during the summer of 2019.  Current tre
 
 [R Studio](https://posit.co) at https://posit.co
 
-[College Scorecard Data](https://collegescorecard.ed.gov/data/)
+[College Scorecard Data](https://collegescorecard.ed.gov/data/), including [Documentation](https://collegescorecard.ed.gov/assets/InstitutionDataDocumentation.pdf) and [Data Dictionary](https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx)
 
 [Nicholas Horton's Shiny App - College Explorer]( https://r.amherst.edu/apps/nhorton/collegescorecard2b/)
 
