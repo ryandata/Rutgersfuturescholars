@@ -27,4 +27,6 @@ The [College Scorecard](https://collegescorecard.ed.gov/) site provides informat
 
 Using this information along with R tools, we can build our own interactive tool to explore the data.
 
-[CollegeSearchTool via Shiny](https://shiny.ryanwomack.com:3838/CollegeSearchTool)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool)
+[CollegeSearchTool via Shiny](https://ryandata.shinyapps.io/CollegeSearchTool)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool)
+
+<!--- (https://shiny.ryanwomack.com:3838/CollegeSearchTool) ---
