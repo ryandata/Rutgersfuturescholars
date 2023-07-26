@@ -23,6 +23,8 @@ This page contains links for the current single half-day version of an introduct
 
 ## College Scorecard
 
+Almost all colleges release a Common Data Set on their web site and have a tool usually called a Net Price Calculator on their web site.  Search for these phrases plus the college name.
+
 The [College Scorecard](https://collegescorecard.ed.gov/) site provides information about collegs in an interactive format. The full [College Scorecard Data](https://collegescorecard.ed.gov/data/) is available for download, along with [Documentation](https://collegescorecard.ed.gov/assets/InstitutionDataDocumentation.pdf) and a [Data Dictionary](https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx).
 
 Using this information along with R tools, we can build our own interactive tool to explore the data.
