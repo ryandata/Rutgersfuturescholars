@@ -1,25 +1,30 @@
-This is a small repository of materials relating to Data Science for [Rutgers Future Scholars](https://futurescholars.rutgers.edu/).
+This page contains links for the current single half-day version of an introduction to **data science** in a library context, with a focus on higher education and college choice.
 
-For the summers of 2016, 2017, 2018, and 2019, Ryan Womack taught Rutgers Future Scholars interns (rising juniors) a mini-course on data science topics over four half-days, while Francesca Giannetti taught Digital Humanities topics and Jill Nathanson coordinated the program.  COVID interrupted this in-person experience.  In summer 2023, the Libraries returned to offering an internship experience for RFS with a team-taught approach including librarians Tajah Ebram, Francesca Giannetti, and Julia Maxwell.
-
-This repository contains materials for the current single half-day version of an introduction to data science in a library context.
-
-Rutgers Future Scholars met for one week during the summer of 2019.  Current trends in big data and analytics were discussed.  Interns were introduced to importing, analyzing, and graphing data in the R statistical software environment, using real and current data sources from the Education Department and the US Census, working with data dictionaries and APIs, and understanding data via interactive visualization tools.
-
-## Useful Links:
+## Background links on Big Data and Data Science
 
 [NYC Taxis and Uber](https://www.r-bloggers.com/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/)
 
 [Galazy Zoo](https://www.galaxyzoo.org)
 
+## R open source statistical software
+
 [R software](https://r-project.org) at https://r-project.org
 
 [R Studio](https://posit.co) at https://posit.co
 
-[College Scorecard Data](https://collegescorecard.ed.gov/data/), including [Documentation](https://collegescorecard.ed.gov/assets/InstitutionDataDocumentation.pdf) and [Data Dictionary](https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx)
+## Higher Ed Data Studies
 
 [Nicholas Horton's Shiny App - College Explorer]( https://r.amherst.edu/apps/nhorton/collegescorecard2b/)
 
 [Chetty College Mobility]( https://www.nytimes.com/interactive/projects/college-mobility/)
 
 [Equality of Opportunity Project](http://www.equality-of-opportunity.org/college/)
+
+
+## College Scorecard
+
+The [College Scorecard](https://collegescorecard.ed.gov/) site provides information about collegs in an interactive format. The full [College Scorecard Data](https://collegescorecard.ed.gov/data/) is available for download, along with [Documentation](https://collegescorecard.ed.gov/assets/InstitutionDataDocumentation.pdf) and a [Data Dictionary](https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx).
+
+Using this information along with R tools, we can build our own interactive tool to explore the data.
+
+[CollegeSearchTool via Shiny](https://shiny.ryanwomack.com:3838/CollegeSearchTool)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool)
