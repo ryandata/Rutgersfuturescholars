@@ -18,7 +18,7 @@ This page contains links for the current single half-day version of an introduct
 
 [Chetty College Mobility]( https://www.nytimes.com/interactive/projects/college-mobility/)
 
-[Equality of Opportunity Project](http://www.equality-of-opportunity.org/college/)
+[Equality of Opportunity Project](http://www.equality-of-opportunity.org/college/) in the [latest news](https://www.nytimes.com/interactive/2023/07/24/upshot/ivy-league-elite-college-admissions.html)
 
 
 ## College Scorecard
