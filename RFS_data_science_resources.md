@@ -6,6 +6,16 @@ This page contains links for the current single half-day version of an introduct
 
 [Galazy Zoo](https://www.galaxyzoo.org)
 
+[Data Science Skills](https://www.r-bloggers.com/2022/03/which-data-science-skills-are-important-50000-increase-in-salary-in-6-months/)
+
+[Battle of the Data Science Venn Diagrams](https://deeplearning.lipingyang.org/wp-content/uploads/2017/10/Battle-of-the-Data-Science-Venn-Diagrams.pdf)
+
+## Exploring Data
+
+[DataBasic.io](https://databasic.io/en/) and [Dogs of NY data](https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp/about_data)
+
+[Pudding.cool](https://pudding.cool/) explore various topics through dynamic visualizations
+
 ## R open source statistical software
 
 [R software](https://r-project.org) at https://r-project.org
@@ -34,6 +44,6 @@ The [College Scorecard](https://collegescorecard.ed.gov/) site provides informat
 
 Using this information along with R tools, we can build our own interactive tool to explore the data.
 
-[CollegeSearchTool via Shiny](https://ryandata.shinyapps.io/CollegeSearchTool)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool)
+[CollegeSearchTool via Shiny](https://ryanwomack.shinyapps.io/CollegeSearchTool)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool)
 
 <!--- (https://shiny.ryanwomack.com:3838/CollegeSearchTool) ---
