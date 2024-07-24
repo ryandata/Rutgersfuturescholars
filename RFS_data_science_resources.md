@@ -16,11 +16,15 @@ This page contains links for the current single half-day version of an introduct
 
 [Pudding.cool](https://pudding.cool/) explore various topics through dynamic visualizations
 
-## R open source statistical software
+## R open source statistical software (and Python)
 
 [R software](https://r-project.org) at https://r-project.org
 
 [R Studio](https://posit.co) at https://posit.co
+
+[Learn R](https://libguides.rutgers.edu/data_R)
+
+[Learn Python](https://libguides.rutgers.edu/datascience/python)
 
 ## Higher Ed Data Studies
 
@@ -33,7 +37,7 @@ September 2023 New York Times studies:
 
 [Chetty College Mobility]( https://www.nytimes.com/interactive/projects/college-mobility/)
 
-[Equality of Opportunity Project](http://www.equality-of-opportunity.org/college/) in the [latest news](https://www.nytimes.com/interactive/2023/07/24/upshot/ivy-league-elite-college-admissions.html)
+[Equality of Opportunity Project](http://www.equality-of-opportunity.org/college/) in the [news](https://www.nytimes.com/interactive/2023/07/24/upshot/ivy-league-elite-college-admissions.html)
 
 
 ## College Scorecard
