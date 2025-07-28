@@ -18,13 +18,15 @@ This page contains links for the current single half-day version of an introduct
 
 ## R open source statistical software (and Python)
 
-[R software](https://r-project.org) at https://r-project.org
+[R software](https://r-project.org) at <https://r-project.org>
 
-[R Studio](https://posit.co) at https://posit.co
+[R Studio](https://posit.co) at <https://posit.co>
 
 [Learn R](https://libguides.rutgers.edu/data_R)
 
 [Learn Python](https://libguides.rutgers.edu/datascience/python)
+
+[Shiny](https://shiny.rstudio.com/) and [Hosting a Shiny Server](https://www.ryanwomack.com/data_topics/data_visualization_2/data_visualization_2.html)
 
 ## Higher Ed Data Studies
 
@@ -48,6 +50,6 @@ The [College Scorecard](https://collegescorecard.ed.gov/) site provides informat
 
 Using this information along with R tools, we can build our own interactive tool to explore the data.
 
-[CollegeSearchTool via Shiny](https://ryanwomack.shinyapps.io/CollegeSearchTool)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool) )
+[CollegeSearchTool via Shiny](https://shiny.ryanwomack.com)  (source code available at [github/ryandata/CollegeSearchTool](https://github.com/ryandata/CollegeSearchTool) )
 
 <!--- (https://shiny.ryanwomack.com:3838/CollegeSearchTool) ---
