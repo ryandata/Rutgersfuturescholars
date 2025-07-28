@@ -26,7 +26,7 @@ This page contains links for the current single half-day version of an introduct
 
 [Learn Python](https://libguides.rutgers.edu/datascience/python)
 
-[Shiny](https://shiny.rstudio.com/) and [Hosting a Shiny Server](https://www.ryanwomack.com/data_topics/data_visualization_2/data_visualization_2.html)
+[Shiny](https://shiny.rstudio.com/) and [Learning Shiny and Hosting a Shiny Server](https://www.ryanwomack.com/data_topics/data_visualization_2/data_visualization_2.html)
 
 ## Higher Ed Data Studies
 
@@ -34,8 +34,6 @@ September 2023 New York Times studies:
 
 - [Why does Duke have so few low income students?](https://www.nytimes.com/interactive/2023/09/07/magazine/duke-economic-diversity.html)
 - [The Top U.S. Colleges With the Greatest Economic Diversity](https://www.nytimes.com/interactive/2023/09/07/magazine/college-access-index.html)
-
-[Nicholas Horton's Shiny App - College Explorer]( https://r.amherst.edu/apps/nhorton/collegescorecard2b/)
 
 [Chetty College Mobility]( https://www.nytimes.com/interactive/projects/college-mobility/)
 
